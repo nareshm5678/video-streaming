@@ -1,0 +1,124 @@
+body {
+  background-image: url("C:/Users/nares/OneDrive/Desktop/bis/video stream/node-video-stream-main/node-video-stream-main/frontend/bgimage.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh; 
+  margin: 0;
+  font-family: 'Arial', sans-serif; 
+  color: white;
+  position: relative; 
+  z-index: 1;
+}
+
+
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 2; /* Ensure app content sits above background */
+  background-color: transparent; /* Ensure no background color blocks the image */
+}
+
+/* Header styling */
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  animation: fadeIn 2s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: transparent; /* Make the header background transparent */
+  z-index: 2; /* Ensure header sits above the body content */
+}
+
+/* Category buttons styling */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  z-index: 3; /* Ensuring buttons sit above the content */
+}
+
+.category-button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.category-button:hover {
+  transform: scale(1.1);
+  background-color: #21a1f1;
+}
+
+/* Video list container styling */
+.video-list {
+  margin-top: 20px;
+  color: white;
+  z-index: 3; /* Ensuring video options sit above content */
+}
+
+/* Video options styling */
+.video-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.video-button:hover {
+  transform: scale(1.1);
+  background-color: #21a1f1;
+}
+
+/* Video container styling */
+.video-container {
+  width: 80%;
+  max-width: 900px;
+  margin-top: 20px;
+  background: #000; /* Black background for the video player area */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  z-index: 4; /* Ensuring video container sits above other elements */
+}
+
+/* Video element styling */
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframe animation for fading in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
